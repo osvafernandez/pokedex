@@ -67,6 +67,10 @@ export class PokemonService {
     return result;
   }
 
+  async removeAll(){
+    await this.pokemonModel.deleteMany({});
+  }
+
   private handleExceptions(error: any){
     console.log(error);
       if (error.code == 11000) throw new BadRequestException(`Pokemon exists in db ${JSON.stringify(error.keyValue)} `);
