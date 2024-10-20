@@ -19,6 +19,15 @@ npm install -g @nest/cli
 docker-compose up -d
 ```
 
+5. Clonar el archivo __.env.template__ y renombrarlo a __.env__
+
+6. LLenar las variables de entorno definidas
+
+7. Ejecutar la aplicacion con:
+```
+yarn start:dev
+```
+
 ## Stack
 # MongoDb
 # Nest
