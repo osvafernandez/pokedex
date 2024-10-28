@@ -18,7 +18,9 @@ import { JoiValidationSchema } from './common/config/joi.validation';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname,'..','public')
     }),
-    MongooseModule.forRoot( process.env.MONGO_DB ),
+    MongooseModule.forRoot( process.env.MONGO_DB, {
+      dbName: 'pokeDb'
+    } ),
     PokemonModule,
     CommonModule,
     SeedModule
